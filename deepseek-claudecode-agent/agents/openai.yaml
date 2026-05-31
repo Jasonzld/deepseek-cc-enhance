@@ -1,0 +1,4 @@
+interface:
+  display_name: "DeepSeek ClaudeCode Agent"
+  short_description: "Run DeepSeek V4 Pro through ClaudeCode CLI safely."
+  default_prompt: "Use this skill to prepare and run a bounded DeepSeek V4 Pro reverse-analysis task through ClaudeCode CLI without embedding secrets."

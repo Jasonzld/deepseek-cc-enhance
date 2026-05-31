@@ -1,0 +1,10 @@
+runs/
+*.env
+*.key
+*.tmp
+*.bak
+__pycache__/
+*.pyc
+.DS_Store
+repairs.jsonl
+last-repair.json
