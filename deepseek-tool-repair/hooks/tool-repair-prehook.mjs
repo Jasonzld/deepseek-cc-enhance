@@ -34,8 +34,13 @@ const MAX_RECURSION_DEPTH = 50;
 // Only repair these tools (empty = repair all)
 const TOOL_ALLOWLIST = new Set([]);
 
-// Never repair these tools
-const TOOL_DENYLIST = new Set([]);
+// Never repair these tools — same field names, different semantics across tools
+const TOOL_DENYLIST = new Set([
+  'Skill', 'skill',           // args is string (not array like Bash)
+  'AskUserQuestion',          // questions/options are objects (not strings)
+  'Task', 'task',             // subagent_type, prompt are strings
+  'Agent', 'agent',           // same reason
+]);
 
 function readStdin(timeoutMs = 2000) {
   return new Promise((resolve) => {
